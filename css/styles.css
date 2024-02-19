@@ -594,6 +594,7 @@ background-color: #404BBF;
     height: 120px;
     margin-bottom: 0;
     padding: 8px 16px;
+    line-height: 1.17;
 }
 
 .comment-container {
@@ -633,9 +634,9 @@ background-color: #404BBF;
 .privacy-policy-label {
     font-weight: 400;
     font-size: 12px;
-    line-height: 16px;
+    line-height: 1.17;
     letter-spacing: 0.04em;
-    color: rgba(142, 143, 153, 1);
+    color: #8e8f99;
     align-self: flex-start;
     margin-bottom: 24px;
 }
@@ -646,7 +647,7 @@ background-color: #404BBF;
 }
 
 .send-button {
-    width: 169px;
+    min-width: 169px;
     height: 56px;
     background-color: rgba(77, 90, 229, 1);
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
@@ -657,7 +658,10 @@ background-color: #404BBF;
     line-height: 24px;
     letter-spacing: 0.04em;
     color: rgba(255, 255, 255, 1);
-    align-self: center;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* .modal-container {
@@ -714,7 +718,7 @@ background-color: #404BBF;
     border: 1px solid #4D5AE5;
 }
 
-.modal-input:focus-within .svg-input {
+.modal-input:focus .svg-input {
     fill: #4D5AE5;
 }
 
@@ -724,4 +728,23 @@ background-color: #404BBF;
 
 .policy-modal-container {
     margin-bottom: 24px;
+}
+
+.policy-check {
+    width: 16px;
+    height: 16px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 2px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    fill: transparent;
+    margin-right: 8px;
+}
+
+input[type="checkbox"]:checked .policy-check{
+    background-color: #404bbf;
+    border: none;
+    fill: #F4F4FD;
 }

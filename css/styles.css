@@ -567,10 +567,11 @@ background-color: #404BBF;
 .modal-label {
     font-weight: 400;
     font-size: 12px;
-    line-height: 14px;
+    line-height: 1.17;
     letter-spacing: 0.04em;
     color: rgba(142, 143, 153, 1);
-    padding-bottom: 4px;
+    margin-bottom: 4px;
+    display: block;
 }
 
 .modal-input {
